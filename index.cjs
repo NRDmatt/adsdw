@@ -1,11 +1,22 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateHTML = require('./src/generateHTML');
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML.cjs');
+const Manager = require('./lib/Manager.cjs');
+const Engineer = require('./lib/Engineer.cjs');
+const Intern = require('./lib/Intern.cjs');
+const express = require('express');
+const app = express();
+const port = 3001;
 
 const team = [];
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
+  
+  app.listen(port, () => {
+    console.log(`Server is listening on port http://localhost:3001/`);
+  });
 
 function promptManager() {
   console.log("Let's build your team!");
