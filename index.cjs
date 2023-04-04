@@ -10,6 +10,9 @@ const port = 3001;
 
 const team = [];
 
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
