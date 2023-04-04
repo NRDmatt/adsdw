@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Roster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>My Team</h1>
+    <div class="card-container">
+        {{{teamMemberCards}}}
+    </div>
+</body>
+
+</html>
+<div class="card">
+    <h2>{{name}}</h2>
+    <h3>{{role}}</h3>
+    <ul>
+        <li>Employee ID: {{id}}</li>
+        <li>Email: <a href="mailto:{{email}}">{{email}}</a></li>
+        {{#if github}}
+        <li>GitHub: <a href="https://github.com/{{github}}" target="_blank">{{github}}</a></li>
+        {{/if}}
+        {{#if school}}
+        <li>School: {{school}}</li>
+        {{/if}}
+        {{#if officeNumber}}
+        <li>Office Number: {{officeNumber}}</li>
+        {{/if}}
+    </ul>
+</div>
